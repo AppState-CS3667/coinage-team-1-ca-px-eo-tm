@@ -10,7 +10,8 @@ public class USDMint extends Mint{
 
     public Coin makeCoin(String type){
         inspect(type);
-
+        smooth(type);
+        buff(type);
         if (type.equals("Penny")){
             c = new Penny();
         }
