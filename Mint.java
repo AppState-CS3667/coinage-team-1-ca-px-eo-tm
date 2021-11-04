@@ -14,6 +14,6 @@ public abstract class Mint {
      * @return a coin object
      */
 
-    public abstract Coin makeCoin();
+    public abstract Coin makeCoin(String Type);
 
 }
