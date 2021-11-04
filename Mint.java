@@ -16,4 +16,8 @@ public abstract class Mint {
 
     public abstract Coin makeCoin(String Type);
 
+    public void inspect(String coin){
+                System.out.println("Inspecting the " + coin + " for imperfect impressions");
+    }
+
 }
