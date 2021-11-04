@@ -1,4 +1,6 @@
 public class Quarter extends Coin
 {
-    //somethin'
+    public Quarter(){
+        super("Quarter", "USD", .25);
+    }
 }

@@ -7,11 +7,15 @@
 public abstract class Coin {
     // work
     private String coinName;
+    private String countryCode;
+    private double denomination;
 
     Smelter smelter;
 
-    public Coin(String inCoinName) {
+    public Coin(String inCoinName, String cc, double denom) {
         coinName = inCoinName;
+        countryCode = cc;
+        denomination = denom;
 
     }
 
@@ -36,12 +40,16 @@ public abstract class Coin {
     /**
      * might need to change. tells how much the coin cost.
      */
-    abstract public void denomination();
+    public double denomination(){
+        return denomination;
+    }
 
     /**
      * might need to change later on. tells what country it came from.
      */
-    abstract public void countryCode();
+    public String countryCode(){
+        return countryCode;
+    }
 
     /**
      * will call the smelter.

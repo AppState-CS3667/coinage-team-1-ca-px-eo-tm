@@ -1,4 +1,6 @@
 public class Penny extends Coin
 {
-    //things
+    public Penny(){
+        super("Penny", "USD", 0.01);
+    }
 }

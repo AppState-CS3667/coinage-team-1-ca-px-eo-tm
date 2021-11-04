@@ -4,7 +4,7 @@
  * @author Team 1
  *
  */
-public class Mint {
+public abstract class Mint {
 
     /**
      * 
@@ -13,10 +13,7 @@ public class Mint {
      * 
      * @return a coin object
      */
-    public Coin makeCoin() {
 
-        return null;
-
-    }
+    public abstract Coin makeCoin();
 
 }
