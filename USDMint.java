@@ -4,6 +4,8 @@ public class USDMint extends Mint{
     
     private Coin c;
 
+    smelter s = new smelter();
+
     public USDMint(){
         c = null;
     }
@@ -13,6 +15,7 @@ public class USDMint extends Mint{
         smooth(type);
         buff(type);
         if (type.equals("Penny")){
+            s.penny();
             c = new Penny();
         }
         else if (type.equals("Nickel")){
