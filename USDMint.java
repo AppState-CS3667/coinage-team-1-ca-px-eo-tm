@@ -4,11 +4,14 @@ public class USDMint extends Mint{
     
     private Coin c;
 
+    smelter s = new smelter();
+
     public USDMint(){
         c = null;
     }
 
     public Coin makeCoin(String type){
+        s.smelt(type);
         inspect(type);
         smooth(type);
         buff(type);
