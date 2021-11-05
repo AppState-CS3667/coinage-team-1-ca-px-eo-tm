@@ -6,6 +6,15 @@ public class smelter{
         if(type.equals("Penny")){
             spec4();
         }
+        else if(type.equals("Quarter") || type.equals("Dime") || type.equals("HalfDollar")){
+            spec2();
+        }
+        else if(type.equals("Dollar")){
+            spec1();
+        }
+        else if(type.equals("Nickel")){
+            spec3();
+        }
     }
     
     private void spec1(){
