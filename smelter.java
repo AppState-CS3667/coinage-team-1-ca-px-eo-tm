@@ -1,26 +1,45 @@
 public class smelter{
 
-    public void dollar(){
+
+    //This is what will get called- add cases for different coins
+    public void smelt(String type){
+        if(type.equals("Penny")){
+            spec4();
+        }
+        else if(type.equals("Quarter") || type.equals("Dime") || type.equals("HalfDollar")){
+            spec2();
+        }
+        else if(type.equals("Dollar")){
+            spec1();
+        }
+        else if(type.equals("Nickel")){
+            spec3();
+        }
+    }
+    
+    private void spec1(){
         System.out.print("Smelting with ");
         System.out.println("88.5% Cu, 6% Zi, 3.5% Mn, 2% Ni");
         System.out.println("Done smelting!");
     }
 
-    public void halfDollar(){
+    private void spec2(){
         System.out.print("Smelting with ");
         System.out.println("91.67% Cu, 8.33% Ni");
         System.out.println("Done smelting!");
     }
 
-    public void nickel(){
+    private void spec3(){
         System.out.print("Smelting with ");
         System.out.println("75% Cu, 25% Ni");
         System.out.println("Done smelting!");
     }
 
-    public void penny(){
+    private void spec4(){
         System.out.print("Smelting with ");
         System.out.println("2.5% Cu, 97.5% Zi");
         System.out.println("Done smelting");
     }
+
+
 }
