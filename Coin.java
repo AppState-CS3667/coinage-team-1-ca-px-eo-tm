@@ -5,7 +5,7 @@
  *
  */
 public abstract class Coin {
-    // work
+
     private String coinName;
     private String countryCode;
     private double denomination;
@@ -28,14 +28,6 @@ public abstract class Coin {
     public String getCoinName() {
         return coinName;
     }
-
-    // USD Coins:
-    // Dollar
-    // HalfDollar
-    // Quarter
-    // Dime
-    // Nickel
-    // Penny
 
     /**
      * might need to change. tells how much the coin cost.
