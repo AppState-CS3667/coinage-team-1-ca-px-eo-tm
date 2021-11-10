@@ -4,6 +4,7 @@ public class Demo{
 
         EURMint e = EURMint.getInstance();
 
+        
         m.makeCoin("Penny");
         System.out.println("");
         m.makeCoin("Nickel");

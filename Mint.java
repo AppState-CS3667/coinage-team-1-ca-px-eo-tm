@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * this is the mint method it should only have 1 instance of it (a singleton)
  * 
@@ -5,6 +7,8 @@
  *
  */
 public abstract class Mint {
+
+    Random rand = new Random(); //to generate numbers for our failure;
 
     /**
      * 
@@ -16,18 +20,33 @@ public abstract class Mint {
 
     public abstract Coin makeCoin(String Type);
 
-    public void inspect(String coin){
-                System.out.println("Inspecting the " + coin + " for imperfect impressions");
-                System.out.println("This " + coin + " is perfect!");
+    public boolean inspect(String coin){
+        int x = rand.nextInt(12);
+        int y = rand.nextInt(12);
+                
+        System.out.println("Inspecting the " + coin + " for imperfect impressions");
+        System.out.println("This " + coin + " is perfect!");
+
+        return (x != y);
     }
 
-    public void smooth(String coin){
+    public boolean smooth(String coin){
+        int x = rand.nextInt(1000);
+        int y = rand.nextInt(1000);
+
         System.out.println("Smoothing the rough edges on the " + coin);
         System.out.println("The edges on the " + coin + " are very smooth now!");
+
+        return (x != y);
     }
-    public void buff(String coin){
+    public boolean buff(String coin){
+        int x = rand.nextInt(1000);
+        int y = rand.nextInt(1000);
+
         System.out.println("Buffing the " + coin + "..");
         System.out.println("It's very shiny now!!");
+
+        return (x != y);
     }
 
 }

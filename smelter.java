@@ -41,5 +41,10 @@ public class smelter{
         System.out.println("Done smelting");
     }
 
+    private void spec5(){
+        System.out.print("Smelting with ");
+        System.out.println("75% Cu, 20% Zi, 5% Ni");
+        System.out.println("Done smelting");
+    }
 
 }

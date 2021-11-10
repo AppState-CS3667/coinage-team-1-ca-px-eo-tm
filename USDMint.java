@@ -12,9 +12,12 @@ public class USDMint extends Mint{
 
     public Coin makeCoin(String type){
         s.smelt(type);
-        inspect(type);
-        smooth(type);
-        buff(type);
+        if(!inspect(type))
+            c = new NullCoin();
+        if(!smooth(type))
+            c = new NullCoin();
+        if(!buff(type))
+            c = new NullCoin();
         if (type.equals("Penny")){
             c = new Penny();
         }

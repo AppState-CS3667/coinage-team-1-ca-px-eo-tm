@@ -4,14 +4,21 @@ public class EURMint extends Mint{
     
     private Coin c;
 
+    smelter s = new smelter();
+
     public EURMint(){
         c = null;
     }
 
     public Coin makeCoin(String type){
-        inspect(type);
-        smooth(type);
-        buff(type);
+        if(!inspect(type))
+            c = new NullCoin();
+        if(!smooth(type))
+            c = new NullCoin();
+        if(!buff(type))
+           c = new NullCoin();
+
+        s.smelt(type);
         if (type.equals("OneEuro")){
             c = new OneEuro();
         }
