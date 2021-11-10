@@ -3,16 +3,16 @@ public class smelter{
 
     //This is what will get called- add cases for different coins
     public void smelt(String type){
-        if(type.equals("Penny")){
+        if(type.equals("Penny") || type.equals("TwoEuroCent") || type.equals("EuroCent") || type.equals("FiveEuroCent")){
             spec4();
         }
         else if(type.equals("Quarter") || type.equals("Dime") || type.equals("HalfDollar")){
             spec2();
         }
-        else if(type.equals("Dollar")){
+        else if(type.equals("Dollar") || type.equals("OneEuro")){
             spec1();
         }
-        else if(type.equals("Nickel")){
+        else if(type.equals("Nickel") || type.equals("FiftyEuroCent") || type.equals("TwentyEuroCent") || type.equals("TenEuroCent")){
             spec3();
         }
     }
