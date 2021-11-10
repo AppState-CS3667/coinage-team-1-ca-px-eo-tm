@@ -16,5 +16,6 @@ clean:
 compile: *.java
 	javac $(JFLAGS) *.java
 
-demo: bin/Demo.class
-	java -cp bin Demo
+Demo: Demo.java
+	javac Demo.java
+	java Demo
