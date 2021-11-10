@@ -34,14 +34,14 @@ public class EURMint extends Mint{
             c = new TwoEuroCent();
         }
         else if (type.equals("EuroCent")) {
-            c = EuroCent;
+            c = new EuroCent();
         }
 
 
         return c;
     }
 
-    public static USDMint getInstance(){
+    public static EURMint getInstance(){
         if (theMint == null){
             theMint = new EURMint();
         }
