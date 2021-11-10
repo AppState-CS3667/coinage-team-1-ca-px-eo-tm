@@ -8,45 +8,55 @@ import java.util.Random;
  */
 public abstract class Mint {
 
-    Random rand = new Random(); //to generate numbers for our failure;
+	/**
+	 * 
+	 * making coin. Factory method USDmint CADmint EURmint GBPmint will implement
+	 * makeCoin method. only 1 mint. A siglenton
+	 * 
+	 * @return a coin object
+	 */
 
-    /**
-     * 
-     * making coin. Factory method USDmint CADmint EURmint GBPmint will implement
-     * makeCoin method. only 1 mint. A siglenton
-     * 
-     * @return a coin object
-     */
+	public abstract Coin makeCoin(String Type);
 
-    public abstract Coin makeCoin(String Type);
+	double randomNumber = Math.random();
+	// Random r = new Random();
 
-    public boolean inspect(String coin){
-        int x = rand.nextInt(12);
-        int y = rand.nextInt(12);
-                
-        System.out.println("Inspecting the " + coin + " for imperfect impressions");
-        System.out.println("This " + coin + " is perfect!");
+	public void inspect(String coin) {
 
-        return (x != y);
-    }
+		int value = (int) (randomNumber * 1001);
+		if (value <= 12) {
+			System.out.println("Inspection of " + coin + " failed. ");
+		} else {
 
-    public boolean smooth(String coin){
-        int x = rand.nextInt(1000);
-        int y = rand.nextInt(1000);
+			System.out.println("Inspecting the " + coin + " for imperfect impressions");
+			System.out.println("This " + coin + " is perfect!");
+		}
 
-        System.out.println("Smoothing the rough edges on the " + coin);
-        System.out.println("The edges on the " + coin + " are very smooth now!");
+	}
 
-        return (x != y);
-    }
-    public boolean buff(String coin){
-        int x = rand.nextInt(1000);
-        int y = rand.nextInt(1000);
+	public void smooth(String coin) {
 
-        System.out.println("Buffing the " + coin + "..");
-        System.out.println("It's very shiny now!!");
+		int value = (int) (randomNumber * 1001);
+		if (value <= 1) {
+			System.out.println("smooth of " + coin + " failed. ");
+		} else {
 
-        return (x != y);
-    }
+			System.out.println("Smoothing the rough edges on the " + coin);
+			System.out.println("The edges on the " + coin + " are very smooth now!");
+		}
+
+	}
+
+	public void buff(String coin) {
+
+		int value = (int) (randomNumber * 1001);
+		if (value <= 1) {
+			System.out.println("Buffing of " + coin + " failed. ");
+		} else {
+			System.out.println("Buffing the " + coin + "..");
+			System.out.println("It's very shiny now!!");
+		}
+
+	}
 
 }
