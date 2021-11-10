@@ -18,45 +18,36 @@ public abstract class Mint {
 
 	public abstract Coin makeCoin(String Type);
 
-	double randomNumber = Math.random();
-	// Random r = new Random();
+	Random rand = new Random(); // to generate numbers for our failure;
 
-	public void inspect(String coin) {
+	public boolean inspect(String coin) {
+		int x = rand.nextInt(12);
+		int y = rand.nextInt(12);
 
-		int value = (int) (randomNumber * 1001);
-		if (value <= 12) {
-			System.out.println("Inspection of " + coin + " failed. ");
-		} else {
+		System.out.println("Inspecting the " + coin + " for imperfect impressions");
+		System.out.println("This " + coin + " is perfect!");
 
-			System.out.println("Inspecting the " + coin + " for imperfect impressions");
-			System.out.println("This " + coin + " is perfect!");
-		}
-
+		return (x != y);
 	}
 
-	public void smooth(String coin) {
+	public boolean smooth(String coin) {
+		int x = rand.nextInt(1000);
+		int y = rand.nextInt(1000);
 
-		int value = (int) (randomNumber * 1001);
-		if (value <= 1) {
-			System.out.println("smooth of " + coin + " failed. ");
-		} else {
+		System.out.println("Smoothing the rough edges on the " + coin);
+		System.out.println("The edges on the " + coin + " are very smooth now!");
 
-			System.out.println("Smoothing the rough edges on the " + coin);
-			System.out.println("The edges on the " + coin + " are very smooth now!");
-		}
-
+		return (x != y);
 	}
 
-	public void buff(String coin) {
+	public boolean buff(String coin) {
+		int x = rand.nextInt(1000);
+		int y = rand.nextInt(1000);
 
-		int value = (int) (randomNumber * 1001);
-		if (value <= 1) {
-			System.out.println("Buffing of " + coin + " failed. ");
-		} else {
-			System.out.println("Buffing the " + coin + "..");
-			System.out.println("It's very shiny now!!");
-		}
+		System.out.println("Buffing the " + coin + "..");
+		System.out.println("It's very shiny now!!");
 
+		return (x != y);
 	}
 
 }
