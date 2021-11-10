@@ -47,7 +47,7 @@ public abstract class Coin {
      * will call the smelter.
      */
     public void performSmelt() {
-        smelter.smelt();
+        Smelter.smelt(coinName);
     }
 
     /**

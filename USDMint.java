@@ -4,7 +4,7 @@ public class USDMint extends Mint{
     
     private Coin c;
 
-    smelter s = new smelter();
+    Smelter s = new Smelter();
 
     public USDMint(){
         c = null;
