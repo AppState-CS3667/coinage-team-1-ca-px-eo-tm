@@ -16,6 +16,7 @@ public class Demo{
         m.makeCoin("HalfDollar");
         System.out.println("");
         m.makeCoin("Dollar");
+        System.out.println("");
 
         e.makeCoin("OneEuro");
         System.out.println("");
