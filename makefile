@@ -4,7 +4,7 @@ JFLAGS = -g
 default:
 	@echo "'make clean' this command will removes *.class *~ files"
 	@echo "'make compile' this command will compiles all Java files"
-	@echo "'make demo' this command will runs simulator demo"
+	@echo "'make Demo' this command will runs simulator demo"
 
 
 clean:
